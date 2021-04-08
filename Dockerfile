@@ -6,6 +6,6 @@ RUN npm install --production --registry=https://registry.npm.taobao.org && npm r
 
 # 部署
 FROM nginx
-COPY --from=build /web/build/* /webs/web_hook
-COPY --from=build /web/web_hook.conf /etc/nginx/conf.d/
+COPY --from=build /web/build/* /webs/web_hook/
+COPY ./web/web_hook.conf /etc/nginx/conf.d/
 RUN nginx
