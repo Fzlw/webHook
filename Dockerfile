@@ -1,5 +1,5 @@
 # 构建
-FROM node:lts-alpine as build
+FROM node:12 as build
 COPY . /web
 WORKDIR /web
 RUN npm install --production --registry=https://registry.npm.taobao.org && npm run build
