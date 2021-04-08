@@ -1,4 +1,4 @@
-# 构建
+# 构建 
 FROM node:12 as build
 COPY . /web
 WORKDIR /web
